@@ -12,29 +12,29 @@
     <div class="bg-white p-8 rounded-lg shadow-md w-96">
         <h1 class="text-2xl font-bold text-center mb-6">Register</h1>
 
-        <form>
+        <form id="registerForm" action="/src/register.html" method="post">
             <label class="block mb-2">Name</label>
-            <input type="name" required 
+            <input id="userInput" type="userInput" required 
                    class="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
 
 
             <label class="block mb-2">Email</label>
-            <input type="email" required 
+            <input id="mailInput" type="email" required 
                    class="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
 
             
             <label class="block mb-2">Password</label>
-            <input type="password" required 
+            <input id="passInput" type="password" required 
                    class="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
 
             
             <label class="block mb-2">Confirm Password</label>
-            <input type="password" required 
+            <input id="confirmInput" type="password" required 
                    class="w-full p-2 mb-4 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
 
             
             <label class="block mb-2">Birth Date</label>
-            <input type="date" required 
+            <input id="dateInput" type="date" required 
                    class="w-full p-2 mb-6 border rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
 
            
@@ -50,7 +50,9 @@
             </a>
 
         </form>
+        <div id="registerMessage" class="mt-2 text-red-500 text-center text-sm"></div>
     </div>
 
 </body>
+<script src="register.js"></script>
 </html>
