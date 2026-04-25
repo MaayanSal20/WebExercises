@@ -21,16 +21,24 @@ if (password !== confirmPassword) {
 }
 
 try {
-    let users = JSON.parse(localStorage.getItem('users')) || []; 
+ let users = JSON.parse(localStorage.getItem('users')) || []; 
+
 if (users.some(user => user.username === username || user.email === email)) {
-      registerMessage.textContent = "Username or email already exists.";
-      registerMessage.classList.remove("text-green-500");
-      registerMessage.classList.add("text-red-500");
-      return;
+  registerMessage.textContent = "Username or email already exists.";
+  registerMessage.classList.remove("text-green-500");
+  registerMessage.classList.add("text-red-500");
+  return;
+}
+
+// בדיקה אם כבר יש admin
+const isAdminExists = users.some(user => user.role === "admin");
+const role = isAdminExists ? "user" : "admin";
+
+users.push({ username, email, password, dob, role });
 }
 
 
-users.push({ username, email, password, dob });
+
 
 
 localStorage.setItem('users', JSON.stringify(users));
