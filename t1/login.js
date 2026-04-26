@@ -24,6 +24,10 @@ loginForm.addEventListener('submit', function(event){
     // 🔥 כאן נשמר המשתמש המחובר
     localStorage.setItem('currentUser', JSON.stringify(user));
 
+    if (user.role=="admin"){
+      window.location.href="userManagement.html";
+    }
+    
   } else {
     loginMessage.textContent = 'Invalid username/email or password.';
     loginMessage.classList.remove('text-green-500');

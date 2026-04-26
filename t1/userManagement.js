@@ -1,8 +1,9 @@
 console.log("JS loaded");
 const currentUser=JSON.parse(localStorage.getItem('currentUser'));
 
-if (!currentUser){
-    alert("No user is logged in!")
+if (!currentUser || currentUser.role!="admin"){
+    alert("Access demied!");
+    window.location.href="lodin.html";
 }
 
 const welcomeElement=document.getElementById('welcomeMessage');
