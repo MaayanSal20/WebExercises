@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>User Management</title>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    </head>
+
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+            <h1 id="welcomeMessage" class="text-3xl font-bold text-center mb-6 text-gray-800">Welcome</h1>
+            <div class="overflow-x-auto">       
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="bg-gray-200 text-gray-700 text-left">
+                            <th class="p-3">Username</th>
+                            <th class="p-3">Email</th>
+                            <th class="p-3">Date of birth</th>
+                            <th class="p-3">Role</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody" class="text-gray-700"></tbody>
+                </table>
+            </div>
+
+        </div>
+        <script src="userManagement.js"></script>
+    </body>
+</html>
